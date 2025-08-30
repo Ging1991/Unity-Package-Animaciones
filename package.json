@@ -1,0 +1,18 @@
+{
+  "name": "com.ging1991.animaciones",
+  "version": "1.0.0",
+  "displayName": "Animaciones",
+  "description": "Librería de Animaciones para Unity.",
+  "unity": "2021.3",
+  "keywords": [
+    "time",
+    "clock",
+    "reloj",
+    "utilities"
+  ],
+  "author": {
+    "name": "Carlos Caballero",
+    "email": "tu-email@ejemplo.com",
+    "url": "https://github.com/Ging1991/Unity-Package-Animaciones.git"
+  }
+}

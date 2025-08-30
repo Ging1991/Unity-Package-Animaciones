@@ -1,0 +1,14 @@
+{
+  "name": "Ging1991.Animaciones",
+  "rootNamespace": "Ging1991.Animaciones",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
