@@ -51,10 +51,15 @@ namespace Ging1991.Animaciones {
 		}
 
 
-		private void DetenerAnimacion() {
-			if (animando) { 
+		void OnDestroy() {
+			DetenerAnimacion();
+        }
+
+
+        private void DetenerAnimacion()	{
+			if (animando)
+			{
 				Reloj.GetInstanciaGlobal().Desuscribir(this);
-				gameObject.SetActive(false);
 				accion?.Finalizar();
 				animando = false;
 			}

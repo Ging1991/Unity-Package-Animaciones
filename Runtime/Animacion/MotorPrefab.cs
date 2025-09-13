@@ -9,6 +9,7 @@ namespace Ging1991.Animaciones {
 
 		[Header("Controlador de la animación")]
 		public ControlAnimaciones animacion;
+		public bool desactivarAlTerminar = true;
 
 		[Header("Configuración Escalar")]
 		public bool usarEscalar = true;
@@ -36,13 +37,34 @@ namespace Ging1991.Animaciones {
 			if (usarTransparentar) {
 				if (imagen == null) {
 					Debug.LogWarning("MotorPrefab: Se activó Transparentar pero no se asignó la imagen.");
-				} else {
+				}
+				else {
 					animaciones.Add(new Transparentar(imagen, alfaInicial, alfaFinal, alfaIteraciones));
 				}
 			}
-
-			animacion.Inicializar(animaciones, accion);
+			if (desactivarAlTerminar) {
+				animacion.Inicializar(animaciones, new Desactivar(gameObject));
+			}
+			else {
+				animacion.Inicializar(animaciones, accion);
+			}
 		}
+
+
+		private class Desactivar : IFinalizar {
+
+			private GameObject objeto;
+
+			public Desactivar(GameObject objeto) {
+				this.objeto = objeto;
+			}
+
+			public void Finalizar() {
+				objeto.SetActive(false);
+			}
+
+		}
+
 
 	}
 }
